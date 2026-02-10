@@ -1,0 +1,578 @@
+[
+  {
+    "name": "Geo.webp",
+    "link": "assets/markers/Geo.webp"
+  },
+  {
+    "name": "Mark_of_Pride.webp",
+    "link": "assets/markers/charms/Mark_of_Pride.webp"
+  },
+  {
+    "name": "Unbreakable_Strength.webp",
+    "link": "assets/markers/charms/Unbreakable_Strength.webp"
+  },
+  {
+    "name": "Soul_Eater.webp",
+    "link": "assets/markers/charms/Soul_Eater.webp"
+  },
+  {
+    "name": "Stalwart_Shell.webp",
+    "link": "assets/markers/charms/Stalwart_Shell.webp"
+  },
+  {
+    "name": "Fragile_Greed.webp",
+    "link": "assets/markers/charms/Fragile_Greed.webp"
+  },
+  {
+    "name": "Kingsoul.webp",
+    "link": "assets/markers/charms/Kingsoul.webp"
+  },
+  {
+    "name": "Quick_Slash.webp",
+    "link": "assets/markers/charms/Quick_Slash.webp"
+  },
+  {
+    "name": "Quick_Focus.webp",
+    "link": "assets/markers/charms/Quick_Focus.webp"
+  },
+  {
+    "name": "Deep_Focus.webp",
+    "link": "assets/markers/charms/Deep_Focus.webp"
+  },
+  {
+    "name": "Spore_Shroom.webp",
+    "link": "assets/markers/charms/Spore_Shroom.webp"
+  },
+  {
+    "name": "Unbreakable_Greed.webp",
+    "link": "assets/markers/charms/Unbreakable_Greed.webp"
+  },
+  {
+    "name": "Hiveblood.webp",
+    "link": "assets/markers/charms/Hiveblood.webp"
+  },
+  {
+    "name": "Dashmaster.webp",
+    "link": "assets/markers/charms/Dashmaster.webp"
+  },
+  {
+    "name": "Nailmaster's_Glory.webp",
+    "link": "assets/markers/charms/Nailmaster's_Glory.webp"
+  },
+  {
+    "name": "Lifeblood_Heart.webp",
+    "link": "assets/markers/charms/Lifeblood_Heart.webp"
+  },
+  {
+    "name": "Wayward_Compass.webp",
+    "link": "assets/markers/charms/Wayward_Compass.webp"
+  },
+  {
+    "name": "Carefree_Melody.webp",
+    "link": "assets/markers/charms/Carefree_Melody.webp"
+  },
+  {
+    "name": "Defender's_Crest.webp",
+    "link": "assets/markers/charms/Defender's_Crest.webp"
+  },
+  {
+    "name": "Unbreakable_Heart.webp",
+    "link": "assets/markers/charms/Unbreakable_Heart.webp"
+  },
+  {
+    "name": "Grubberfly's_Elegy.webp",
+    "link": "assets/markers/charms/Grubberfly's_Elegy.webp"
+  },
+  {
+    "name": "Joni's_Blessing.webp",
+    "link": "assets/markers/charms/Joni's_Blessing.webp"
+  },
+  {
+    "name": "Fragile_Strength.webp",
+    "link": "assets/markers/charms/Fragile_Strength.webp"
+  },
+  {
+    "name": "Soul_Catcher.webp",
+    "link": "assets/markers/charms/Soul_Catcher.webp"
+  },
+  {
+    "name": "Steady_Body.webp",
+    "link": "assets/markers/charms/Steady_Body.webp"
+  },
+  {
+    "name": "Thorns_of_Agony.webp",
+    "link": "assets/markers/charms/Thorns_of_Agony.webp"
+  },
+  {
+    "name": "Glowing_Womb.webp",
+    "link": "assets/markers/charms/Glowing_Womb.webp"
+  },
+  {
+    "name": "Fury_of_the_Fallen.webp",
+    "link": "assets/markers/charms/Fury_of_the_Fallen.webp"
+  },
+  {
+    "name": "Heavy_Blow.webp",
+    "link": "assets/markers/charms/Heavy_Blow.webp"
+  },
+  {
+    "name": "Void_Heart.webp",
+    "link": "assets/markers/charms/Void_Heart.webp"
+  },
+  {
+    "name": "Sprintmaster.webp",
+    "link": "assets/markers/charms/Sprintmaster.webp"
+  },
+  {
+    "name": "Grubsong.webp",
+    "link": "assets/markers/charms/Grubsong.webp"
+  },
+  {
+    "name": "Spell_Twister.webp",
+    "link": "assets/markers/charms/Spell_Twister.webp"
+  },
+  {
+    "name": "Fragile_Heart.webp",
+    "link": "assets/markers/charms/Fragile_Heart.webp"
+  },
+  {
+    "name": "Sharp_Shadow.webp",
+    "link": "assets/markers/charms/Sharp_Shadow.webp"
+  },
+  {
+    "name": "Gathering_Swarm.webp",
+    "link": "assets/markers/charms/Gathering_Swarm.webp"
+  },
+  {
+    "name": "Flukenest.webp",
+    "link": "assets/markers/charms/Flukenest.webp"
+  },
+  {
+    "name": "Shaman_Stone.webp",
+    "link": "assets/markers/charms/Shaman_Stone.webp"
+  },
+  {
+    "name": "Weaversong.webp",
+    "link": "assets/markers/charms/Weaversong.webp"
+  },
+  {
+    "name": "Longnail.webp",
+    "link": "assets/markers/charms/Longnail.webp"
+  },
+  {
+    "name": "Lifeblood_Core.webp",
+    "link": "assets/markers/charms/Lifeblood_Core.webp"
+  },
+  {
+    "name": "Dreamshield.webp",
+    "link": "assets/markers/charms/Dreamshield.webp"
+  },
+  {
+    "name": "Dream_Wielder.webp",
+    "link": "assets/markers/charms/Dream_Wielder.webp"
+  },
+  {
+    "name": "Shape_of_Unn.webp",
+    "link": "assets/markers/charms/Shape_of_Unn.webp"
+  },
+  {
+    "name": "Baldur_Shell.webp",
+    "link": "assets/markers/charms/Baldur_Shell.webp"
+  },
+  {
+    "name": "Grimmchild.webp",
+    "link": "assets/markers/charms/Grimmchild.webp"
+  },
+  {
+    "name": "Map_Pin_Knight.webp",
+    "link": "assets/markers/pins/Map_Pin_Knight.webp"
+  },
+  {
+    "name": "Map_Pin_Leg_Eater.webp",
+    "link": "assets/markers/pins/Map_Pin_Leg_Eater.webp"
+  },
+  {
+    "name": "Map_Pin_Beast.webp",
+    "link": "assets/markers/pins/Map_Pin_Beast.webp"
+  },
+  {
+    "name": "Map_Pin_Stag.webp",
+    "link": "assets/markers/pins/Map_Pin_Stag.webp"
+  },
+  {
+    "name": "Map_Pin_Springs.webp",
+    "link": "assets/markers/pins/Map_Pin_Springs.webp"
+  },
+  {
+    "name": "Map_Pin_Hunter.webp",
+    "link": "assets/markers/pins/Map_Pin_Hunter.webp"
+  },
+  {
+    "name": "Map_Pin_Black_Egg.webp",
+    "link": "assets/markers/pins/Map_Pin_Black_Egg.webp"
+  },
+  {
+    "name": "Map_Pin_Tree.webp",
+    "link": "assets/markers/pins/Map_Pin_Tree.webp"
+  },
+  {
+    "name": "Map_Pin_Warriors_Grave.webp",
+    "link": "assets/markers/pins/Map_Pin_Warriors_Grave.webp"
+  },
+  {
+    "name": "Vengeful_Spirit_Icon.webp",
+    "link": "assets/markers/pins/Vengeful_Spirit_Icon.webp"
+  },
+  {
+    "name": "Map_Pin_Millibelle.webp",
+    "link": "assets/markers/pins/Map_Pin_Millibelle.webp"
+  },
+  {
+    "name": "Map_Pin_Grubfather.webp",
+    "link": "assets/markers/pins/Map_Pin_Grubfather.webp"
+  },
+  {
+    "name": "Map_Pin_Cocoon.webp",
+    "link": "assets/markers/pins/Map_Pin_Cocoon.webp"
+  },
+  {
+    "name": "Map_Pin_Teacher.webp",
+    "link": "assets/markers/pins/Map_Pin_Teacher.webp"
+  },
+  {
+    "name": "Map_Pin_Godseeker.webp",
+    "link": "assets/markers/pins/Map_Pin_Godseeker.webp"
+  },
+  {
+    "name": "Map_Pin_Nailsmith.webp",
+    "link": "assets/markers/pins/Map_Pin_Nailsmith.webp"
+  },
+  {
+    "name": "Map_Pin_Bench_grey.webp",
+    "link": "assets/markers/pins/Map_Pin_Bench_grey.webp"
+  },
+  {
+    "name": "Map_Pin_Lemm.webp",
+    "link": "assets/markers/pins/Map_Pin_Lemm.webp"
+  },
+  {
+    "name": "Map_Pin_Salubra.webp",
+    "link": "assets/markers/pins/Map_Pin_Salubra.webp"
+  },
+  {
+    "name": "Map_Pin_Iselda.webp",
+    "link": "assets/markers/pins/Map_Pin_Iselda.webp"
+  },
+  {
+    "name": "Map_Pin_Jiji.webp",
+    "link": "assets/markers/pins/Map_Pin_Jiji.webp"
+  },
+  {
+    "name": "Map_Pin_Seer.webp",
+    "link": "assets/markers/pins/Map_Pin_Seer.webp"
+  },
+  {
+    "name": "Map_Pin_Colosseum.webp",
+    "link": "assets/markers/pins/Map_Pin_Colosseum.webp"
+  },
+  {
+    "name": "Map_Pin_Sly.webp",
+    "link": "assets/markers/pins/Map_Pin_Sly.webp"
+  },
+  {
+    "name": "Map_Pin_Grub.webp",
+    "link": "assets/markers/pins/Map_Pin_Grub.webp"
+  },
+  {
+    "name": "Map_Pin_Tram.webp",
+    "link": "assets/markers/pins/Map_Pin_Tram.webp"
+  },
+  {
+    "name": "Map_Pin_Watcher.webp",
+    "link": "assets/markers/pins/Map_Pin_Watcher.webp"
+  },
+  {
+    "name": "Map_Pin_Shade.webp",
+    "link": "assets/markers/pins/Map_Pin_Shade.webp"
+  },
+  {
+    "name": "Grimm_flame_pin.webp",
+    "link": "assets/markers/pins/Grimm_flame_pin.webp"
+  },
+  {
+    "name": "Town_bench.webp",
+    "link": "assets/markers/items/Town_bench.webp"
+  },
+  {
+    "name": "Health_Piece.webp",
+    "link": "assets/markers/items/Health_Piece.webp"
+  },
+  {
+    "name": "Kings_Idol.webp",
+    "link": "assets/markers/items/Kings_Idol.webp"
+  },
+  {
+    "name": "Mask-Shard.webp",
+    "link": "assets/markers/items/Mask-Shard.webp"
+  },
+  {
+    "name": "Collectors_map_LB.webp",
+    "link": "assets/markers/items/Collectors_map_LB.webp"
+  },
+  {
+    "name": "Godtuner_Lit.webp",
+    "link": "assets/markers/items/Godtuner_Lit.webp"
+  },
+  {
+    "name": "Rancid_Egg.webp",
+    "link": "assets/markers/items/Rancid_Egg.webp"
+  },
+  {
+    "name": "Shopkeepers_Key.webp",
+    "link": "assets/markers/items/Shopkeepers_Key.webp"
+  },
+  {
+    "name": "Elegant_Key.webp",
+    "link": "assets/markers/items/Elegant_Key.webp"
+  },
+  {
+    "name": "Icon_HK_Salubras_Blessing_Art.webp",
+    "link": "assets/markers/items/Icon_HK_Salubras_Blessing_Art.webp"
+  },
+  {
+    "name": "Kings_Brand_inventory.webp",
+    "link": "assets/markers/items/Kings_Brand_inventory.webp"
+  },
+  {
+    "name": "Map.webp",
+    "link": "assets/markers/items/Map.webp"
+  },
+  {
+    "name": "Gg_IU_Godfinder_prompt.webp",
+    "link": "assets/markers/items/Gg_IU_Godfinder_prompt.webp"
+  },
+  {
+    "name": "Scroll_Map_Feather.webp",
+    "link": "assets/markers/items/Scroll_Map_Feather.webp"
+  },
+  {
+    "name": "Hunters_Mark.webp",
+    "link": "assets/markers/items/Hunters_Mark.webp"
+  },
+  {
+    "name": "Lumafly_Lantern.webp",
+    "link": "assets/markers/items/Lumafly_Lantern.webp"
+  },
+  {
+    "name": "Pale_Ore.webp",
+    "link": "assets/markers/items/Pale_Ore.webp"
+  },
+  {
+    "name": "Vessel_Fragment.webp",
+    "link": "assets/markers/items/Vessel_Fragment.webp"
+  },
+  {
+    "name": "Tram_Pass.webp",
+    "link": "assets/markers/items/Tram_Pass.webp"
+  },
+  {
+    "name": "Delicate_Flower.webp",
+    "link": "assets/markers/items/Delicate_Flower.webp"
+  },
+  {
+    "name": "Map_Icon.webp",
+    "link": "assets/markers/items/Map_Icon.webp"
+  },
+  {
+    "name": "Hunter_Mark.webp",
+    "link": "assets/markers/items/Hunter_Mark.webp"
+  },
+  {
+    "name": "Love_Key.webp",
+    "link": "assets/markers/items/Love_Key.webp"
+  },
+  {
+    "name": "Godtuner.webp",
+    "link": "assets/markers/items/Godtuner.webp"
+  },
+  {
+    "name": "Simple_Key.webp",
+    "link": "assets/markers/items/Simple_Key.webp"
+  },
+  {
+    "name": "Salubra_Ghost.webp",
+    "link": "assets/markers/items/Salubra_Ghost.webp"
+  },
+  {
+    "name": "Full_Soul_Vessel.webp",
+    "link": "assets/markers/items/Full_Soul_Vessel.webp"
+  },
+  {
+    "name": "Wanderers_Journal.webp",
+    "link": "assets/markers/items/Wanderers_Journal.webp"
+  },
+  {
+    "name": "Hunters_journal.webp",
+    "link": "assets/markers/items/Hunters_journal.webp"
+  },
+  {
+    "name": "City_Crest.webp",
+    "link": "assets/markers/items/City_Crest.webp"
+  },
+  {
+    "name": "Arcane_Egg.webp",
+    "link": "assets/markers/items/Arcane_Egg.webp"
+  },
+  {
+    "name": "Hallownest_Seal.webp",
+    "link": "assets/markers/items/Hallownest_Seal.webp"
+  },
+  {
+    "name": "Quill.webp",
+    "link": "assets/markers/items/Quill.webp"
+  },
+  {
+    "name": "Dash_Slash.webp",
+    "link": "assets/markers/abbilities/Dash_Slash.webp"
+  },
+  {
+    "name": "Shade_Cloak.webp",
+    "link": "assets/markers/abbilities/Shade_Cloak.webp"
+  },
+  {
+    "name": "Mothwing_Cloak.webp",
+    "link": "assets/markers/abbilities/Mothwing_Cloak.webp"
+  },
+  {
+    "name": "Dream_Nail.webp",
+    "link": "assets/markers/abbilities/Dream_Nail.webp"
+  },
+  {
+    "name": "Dream_Nail_Inv.webp",
+    "link": "assets/markers/abbilities/Dream_Nail_Inv.webp"
+  },
+  {
+    "name": "Vengeful_Spirit.webp",
+    "link": "assets/markers/abbilities/Vengeful_Spirit.webp"
+  },
+  {
+    "name": "Vengeful_Spirit_Icon.webp",
+    "link": "assets/markers/abbilities/Vengeful_Spirit_Icon.webp"
+  },
+  {
+    "name": "Ismas_Tears.webp",
+    "link": "assets/markers/abbilities/Ismas_Tears.webp"
+  },
+  {
+    "name": "Howling_Wraiths_Icon.webp",
+    "link": "assets/markers/abbilities/Howling_Wraiths_Icon.webp"
+  },
+  {
+    "name": "Skill_Mantis_Claw.webp",
+    "link": "assets/markers/abbilities/Skill_Mantis_Claw.webp"
+  },
+  {
+    "name": "Desolate_Dive_Icon.webp",
+    "link": "assets/markers/abbilities/Desolate_Dive_Icon.webp"
+  },
+  {
+    "name": "Shade_Cloak_Icon.webp",
+    "link": "assets/markers/abbilities/Shade_Cloak_Icon.webp"
+  },
+  {
+    "name": "Monarch_Wings.webp",
+    "link": "assets/markers/abbilities/Monarch_Wings.webp"
+  },
+  {
+    "name": "Awoken_Dream_Nail_Icon.webp",
+    "link": "assets/markers/abbilities/Awoken_Dream_Nail_Icon.webp"
+  },
+  {
+    "name": "Dream_Gate.webp",
+    "link": "assets/markers/abbilities/Dream_Gate.webp"
+  },
+  {
+    "name": "Dash_Slash_Artwork.PNG.webp",
+    "link": "assets/markers/abbilities/Dash_Slash_Artwork.PNG.webp"
+  },
+  {
+    "name": "Cyclone_Slash.webp",
+    "link": "assets/markers/abbilities/Cyclone_Slash.webp"
+  },
+  {
+    "name": "Isma's_Tear.webp",
+    "link": "assets/markers/abbilities/Isma's_Tear.webp"
+  },
+  {
+    "name": "Descending_Dark.webp",
+    "link": "assets/markers/abbilities/Descending_Dark.webp"
+  },
+  {
+    "name": "Mantis_Claw.webp",
+    "link": "assets/markers/abbilities/Mantis_Claw.webp"
+  },
+  {
+    "name": "Howling_Wraiths.webp",
+    "link": "assets/markers/abbilities/Howling_Wraiths.webp"
+  },
+  {
+    "name": "Icon_HK_Dream_Nail_Art_2.webp",
+    "link": "assets/markers/abbilities/Icon_HK_Dream_Nail_Art_2.webp"
+  },
+  {
+    "name": "Mothwing_Cloak_Icon.webp",
+    "link": "assets/markers/abbilities/Mothwing_Cloak_Icon.webp"
+  },
+  {
+    "name": "Monarch_Wings_Icon.webp",
+    "link": "assets/markers/abbilities/Monarch_Wings_Icon.webp"
+  },
+  {
+    "name": "Great_Slash-2.webp",
+    "link": "assets/markers/abbilities/Great_Slash-2.webp"
+  },
+  {
+    "name": "Shade_Soul.webp",
+    "link": "assets/markers/abbilities/Shade_Soul.webp"
+  },
+  {
+    "name": "Shade_Soul_Icon.webp",
+    "link": "assets/markers/abbilities/Shade_Soul_Icon.webp"
+  },
+  {
+    "name": "Cyclone_Slash_Artwork.PNG.webp",
+    "link": "assets/markers/abbilities/Cyclone_Slash_Artwork.PNG.webp"
+  },
+  {
+    "name": "Descending_Dark_Icon.webp",
+    "link": "assets/markers/abbilities/Descending_Dark_Icon.webp"
+  },
+  {
+    "name": "Crystal_Heart.webp",
+    "link": "assets/markers/abbilities/Crystal_Heart.webp"
+  },
+  {
+    "name": "Crystal_Heart_Icon.webp",
+    "link": "assets/markers/abbilities/Crystal_Heart_Icon.webp"
+  },
+  {
+    "name": "Abyss_Shriek.webp",
+    "link": "assets/markers/abbilities/Abyss_Shriek.webp"
+  },
+  {
+    "name": "Icon_HK_Dreamgate.webp",
+    "link": "assets/markers/abbilities/Icon_HK_Dreamgate.webp"
+  },
+  {
+    "name": "Desolate_Dive.webp",
+    "link": "assets/markers/abbilities/Desolate_Dive.webp"
+  },
+  {
+    "name": "Abyss_Shriek_Icon.webp",
+    "link": "assets/markers/abbilities/Abyss_Shriek_Icon.webp"
+  },
+  {
+    "name": "Icon_HK_Great_Slash.webp",
+    "link": "assets/markers/abbilities/Icon_HK_Great_Slash.webp"
+  }
+]
