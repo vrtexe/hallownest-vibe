@@ -1,30 +1,78 @@
-import L, { Control } from "leaflet";
-
-/**  @import {  Map  } from "leaflet"; */
+import { Control, DomEvent } from "leaflet";
+import { button, div, input, label } from "../html.js";
+/**  @import {  type Map  } from "leaflet"; */
 
 export class CustomControl extends Control {
-  // /** @param {import('leaflet').Map} map */
+  /** @type {HTMLDivElement|undefined|null} */ container;
+
   /**
    * @param {Map} _map
    * @override
    */
   onAdd(_map) {
-    const container = L.DomUtil.create("div", "leaflet-bar leaflet-control");
-    const button = L.DomUtil.create("a", "leaflet-control-button", container);
-
-    L.DomEvent.disableClickPropagation(button);
-    L.DomEvent.on(button, "click", () => {
-      console.log("click");
+    this.container = div({
+      attributes: {
+        // "aria-label": "Custom Control",
+        onclick: (e) => {
+          e.stopPropagation();
+          console.log("Abort event triggered!", e);
+        },
+      },
+      props: {
+        title: "Title",
+        className: "leaflet-bar leaflet-control custom-control",
+        style: {
+          height: "100vh",
+          margin: "0",
+          background: "white",
+          padding: "5px",
+        },
+      },
+      children: [
+        label({
+          props: {
+            htmlFor: "test",
+          },
+          children: "Test Label",
+        }),
+        input({
+          props: {
+            type: "text",
+            placeholder: "Enter text",
+            required: true,
+          },
+        }),
+        // div({ children: "Custom Control" }),
+        button({
+          props: {
+            className: "leaflet-control-button",
+          },
+          event: {
+            click: (e) => {
+              e.stopPropagation();
+              console.log("Button clicked!", e);
+            },
+            dblclick: (e) => {
+              e.stopPropagation();
+              console.log("Button double-clicked!", e);
+            },
+          },
+          children: "Click",
+        }),
+      ],
     });
 
-    container.title = "Title";
-
-    return container;
+    DomEvent.disableScrollPropagation(this.container);
+    DomEvent.disableClickPropagation(this.container);
+    return this.container;
   }
 
   /**
    * @param {Map} _map
    * @override
    */
-  onRemove(_map) {}
+  onRemove(_map) {
+    this.container?.remove();
+    this.container = null;
+  }
 }

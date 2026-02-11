@@ -9,6 +9,7 @@ async function initializeMap() {
     maxZoom: MAP_MAX_ZOOM,
     minZoom: MAP_ZOOM_MIN,
     crs: CustomCSR,
+    zoomControl: false,
   });
 
   createDefaultTileLayer().addTo(map);
@@ -48,7 +49,7 @@ async function initializeMap() {
     mk.on("click", (ev) => {
       ev.originalEvent.stopPropagation();
       ev.originalEvent.preventDefault();
-      console.log("here-123");
+      
       setTimeout(() => {
         const el = L.DomUtil.create("div", "popup-content");
         el.innerHTML = `<h3>Marker Position</h3><p>Latitude:`;
@@ -61,7 +62,7 @@ async function initializeMap() {
   //   console.log("Layer: ", layer.openTooltip([0, 0]));
   // });
 
-  const c = new CustomControl().addTo(map);
+  const c = new CustomControl({position: "topleft", }).addTo(map);
 
   // new
   console.log("Map initialized", c);
