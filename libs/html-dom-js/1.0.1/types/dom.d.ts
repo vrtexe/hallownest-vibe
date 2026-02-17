@@ -1,13 +1,23 @@
-import type { HTMLElementsAttributesMap } from "./attr.ts";
-export type IfEquals<X, Y, A = X, B = never> = (<T>() => T extends X ? 1 : 2) extends (<T>() => T extends Y ? 1 : 2) ? A
-  : B;
+import type { HTMLElementsAttributesMap } from './attributes.d.ts';
+
+export type IfEquals<X, Y, A = X, B = never> =
+  (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2 ? A : B;
 
 export type WritableKeys<T> = {
-  [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>;
+  [P in keyof T]-?: IfEquals<
+    { [Q in P]: T[P] },
+    { -readonly [Q in P]: T[P] },
+    P
+  >;
 }[keyof T];
 
 export type ReadonlyKeys<T> = {
-  [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, never, P>;
+  [P in keyof T]-?: IfEquals<
+    { [Q in P]: T[P] },
+    { -readonly [Q in P]: T[P] },
+    never,
+    P
+  >;
 }[keyof T];
 
 export type RecursivePartial<T> = {
@@ -40,14 +50,26 @@ export type CustomEventListenerOption = {
   options?: boolean | AddEventListenerOptions | undefined | null;
 };
 
-export type ElementEventData<T extends HTMLElement, E extends HTMLElementEventMap = HTMLElementEventMap> = {
-  [K in keyof E]?: DomEventListener<T, K, E> | DomEventListenerOption<T, K, E> | undefined | null;
+export type ElementEventData<
+  T extends HTMLElement,
+  E extends HTMLElementEventMap = HTMLElementEventMap,
+> = {
+  [K in keyof E]?:
+    | DomEventListener<T, K, E>
+    | DomEventListenerOption<T, K, E>
+    | undefined
+    | null;
 };
 // & Record<string, EventListenerOrEventListenerObject | CustomEventListenerOption | undefined | null>;
 
-export type ElementProps<T extends HTMLElement> = PickWritable<RecursivePartial<T>>;
+export type ElementProps<T extends HTMLElement> = PickWritable<
+  RecursivePartial<T>
+>;
 
-export type ElementDData<T extends keyof HTMLElementTagNameMap, E extends HTMLElementEventMap = HTMLElementEventMap> = {
+export type ElementDData<
+  T extends keyof HTMLElementTagNameMap,
+  E extends HTMLElementEventMap = HTMLElementEventMap,
+> = {
   props?: ElementProps<HTMLElementTagNameMap[T]> | undefined | null;
   attributes?: HTMLElementsAttributesMap[T] | undefined | null;
   event?: ElementEventData<HTMLElementTagNameMap[T], E> | undefined | null;

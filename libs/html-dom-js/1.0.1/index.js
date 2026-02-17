@@ -1,12 +1,12 @@
-/** @import {type ElementProps, ElementDData, Children, ElementEventData } from './types.ts' */
-/** @import { type HTMLElementsAttributesMap } from './attr.ts' */
+/** @import {type ElementProps, ElementDData, Children, ElementEventData } from './types/dom.d.ts' */
+/** @import { type HTMLElementsAttributesMap } from './types/attributes.d.ts' */
 
 /**
  * @param {ElementDData<"a">} [data]
  * @return {HTMLAnchorElement}
  */
 export function a(data) {
-  return element("a", data);
+  return element('a', data);
 }
 
 /**
@@ -14,7 +14,7 @@ export function a(data) {
  * @return {HTMLDivElement}
  */
 export function div(data) {
-  return element("div", data);
+  return element('div', data);
 }
 
 /**
@@ -22,7 +22,7 @@ export function div(data) {
  * @return {HTMLButtonElement}
  */
 export function button(data) {
-  return element("button", data);
+  return element('button', data);
 }
 
 /**
@@ -30,7 +30,7 @@ export function button(data) {
  * @return {HTMLSpanElement}
  */
 export function span(data) {
-  return element("span", data);
+  return element('span', data);
 }
 
 /**
@@ -38,7 +38,7 @@ export function span(data) {
  * @return {HTMLParagraphElement}
  */
 export function p(data) {
-  return element("p", data);
+  return element('p', data);
 }
 
 /**
@@ -46,7 +46,7 @@ export function p(data) {
  * @return {HTMLHeadingElement}
  */
 export function h1(data) {
-  return element("h1", data);
+  return element('h1', data);
 }
 
 /**
@@ -54,7 +54,7 @@ export function h1(data) {
  * @return {HTMLHeadingElement}
  */
 export function h2(data) {
-  return element("h2", data);
+  return element('h2', data);
 }
 
 /**
@@ -62,7 +62,7 @@ export function h2(data) {
  * @return {HTMLHeadingElement}
  */
 export function h3(data) {
-  return element("h3", data);
+  return element('h3', data);
 }
 
 /**
@@ -70,7 +70,7 @@ export function h3(data) {
  * @return {HTMLHeadingElement}
  */
 export function h4(data) {
-  return element("h4", data);
+  return element('h4', data);
 }
 
 /**
@@ -78,7 +78,7 @@ export function h4(data) {
  * @return {HTMLHeadingElement}
  */
 export function h5(data) {
-  return element("h5", data);
+  return element('h5', data);
 }
 
 /**
@@ -86,7 +86,7 @@ export function h5(data) {
  * @return {HTMLHeadingElement}
  */
 export function h6(data) {
-  return element("h6", data);
+  return element('h6', data);
 }
 
 /**
@@ -94,7 +94,7 @@ export function h6(data) {
  * @return {HTMLInputElement}
  */
 export function input(data) {
-  return element("input", data);
+  return element('input', data);
 }
 
 /**
@@ -102,7 +102,7 @@ export function input(data) {
  * @return {HTMLFormElement}
  */
 export function form(data) {
-  return element("form", data);
+  return element('form', data);
 }
 
 /**
@@ -110,7 +110,7 @@ export function form(data) {
  * @return {HTMLLabelElement}
  */
 export function label(data) {
-  return element("label", data);
+  return element('label', data);
 }
 
 /**
@@ -118,7 +118,7 @@ export function label(data) {
  * @return {HTMLTextAreaElement}
  */
 export function textarea(data) {
-  return element("textarea", data);
+  return element('textarea', data);
 }
 
 /**
@@ -126,7 +126,7 @@ export function textarea(data) {
  * @return {HTMLSelectElement}
  */
 export function select(data) {
-  return element("select", data);
+  return element('select', data);
 }
 
 /**
@@ -134,7 +134,7 @@ export function select(data) {
  * @return {HTMLOptionElement}
  */
 export function option(data) {
-  return element("option", data);
+  return element('option', data);
 }
 
 /**
@@ -142,7 +142,7 @@ export function option(data) {
  * @return {HTMLImageElement}
  */
 export function img(data) {
-  return element("img", data);
+  return element('img', data);
 }
 
 /**
@@ -150,7 +150,7 @@ export function img(data) {
  * @return {HTMLCanvasElement}
  */
 export function canvas(data) {
-  return element("canvas", data);
+  return element('canvas', data);
 }
 
 /**
@@ -158,7 +158,7 @@ export function canvas(data) {
  * @return {HTMLVideoElement}
  */
 export function video(data) {
-  return element("video", data);
+  return element('video', data);
 }
 
 /**
@@ -166,7 +166,7 @@ export function video(data) {
  * @return {HTMLAudioElement}
  */
 export function audio(data) {
-  return element("audio", data);
+  return element('audio', data);
 }
 
 /**
@@ -174,7 +174,7 @@ export function audio(data) {
  * @return {HTMLTableElement}
  */
 export function table(data) {
-  return element("table", data);
+  return element('table', data);
 }
 
 /**
@@ -182,7 +182,7 @@ export function table(data) {
  * @return {HTMLTableRowElement}
  */
 export function tr(data) {
-  return element("tr", data);
+  return element('tr', data);
 }
 
 /**
@@ -190,7 +190,7 @@ export function tr(data) {
  * @return {HTMLTableCellElement}
  */
 export function td(data) {
-  return element("td", data);
+  return element('td', data);
 }
 
 /**
@@ -198,7 +198,7 @@ export function td(data) {
  * @return {HTMLTableCellElement}
  */
 export function th(data) {
-  return element("th", data);
+  return element('th', data);
 }
 
 /**
@@ -206,7 +206,7 @@ export function th(data) {
  * @return {HTMLTableSectionElement}
  */
 export function thead(data) {
-  return element("thead", data);
+  return element('thead', data);
 }
 
 /**
@@ -214,7 +214,7 @@ export function thead(data) {
  * @return {HTMLTableSectionElement}
  */
 export function tbody(data) {
-  return element("tbody", data);
+  return element('tbody', data);
 }
 
 /**
@@ -222,7 +222,7 @@ export function tbody(data) {
  * @return {HTMLTableSectionElement}
  */
 export function tfoot(data) {
-  return element("tfoot", data);
+  return element('tfoot', data);
 }
 
 /**
@@ -230,7 +230,7 @@ export function tfoot(data) {
  * @return {HTMLUListElement}
  */
 export function ul(data) {
-  return element("ul", data);
+  return element('ul', data);
 }
 
 /**
@@ -238,7 +238,7 @@ export function ul(data) {
  * @return {HTMLOListElement}
  */
 export function ol(data) {
-  return element("ol", data);
+  return element('ol', data);
 }
 
 /**
@@ -246,7 +246,7 @@ export function ol(data) {
  * @return {HTMLLIElement}
  */
 export function li(data) {
-  return element("li", data);
+  return element('li', data);
 }
 
 /**
@@ -254,7 +254,7 @@ export function li(data) {
  * @return {HTMLIFrameElement}
  */
 export function iframe(data) {
-  return element("iframe", data);
+  return element('iframe', data);
 }
 
 /**
@@ -262,7 +262,7 @@ export function iframe(data) {
  * @return {HTMLElement}
  */
 export function section(data) {
-  return element("section", data);
+  return element('section', data);
 }
 
 /**
@@ -270,7 +270,7 @@ export function section(data) {
  * @return {HTMLElement}
  */
 export function article(data) {
-  return element("article", data);
+  return element('article', data);
 }
 
 /**
@@ -278,7 +278,7 @@ export function article(data) {
  * @return {HTMLElement}
  */
 export function nav(data) {
-  return element("nav", data);
+  return element('nav', data);
 }
 
 /**
@@ -286,7 +286,7 @@ export function nav(data) {
  * @return {HTMLElement}
  */
 export function aside(data) {
-  return element("aside", data);
+  return element('aside', data);
 }
 
 /**
@@ -294,7 +294,7 @@ export function aside(data) {
  * @return {HTMLElement}
  */
 export function header(data) {
-  return element("header", data);
+  return element('header', data);
 }
 
 /**
@@ -302,7 +302,7 @@ export function header(data) {
  * @return {HTMLElement}
  */
 export function footer(data) {
-  return element("footer", data);
+  return element('footer', data);
 }
 
 /**
@@ -310,7 +310,7 @@ export function footer(data) {
  * @return {HTMLElement}
  */
 export function main(data) {
-  return element("main", data);
+  return element('main', data);
 }
 
 /**
@@ -318,7 +318,7 @@ export function main(data) {
  * @return {HTMLElement}
  */
 export function figure(data) {
-  return element("figure", data);
+  return element('figure', data);
 }
 
 /**
@@ -326,7 +326,7 @@ export function figure(data) {
  * @return {HTMLElement}
  */
 export function figcaption(data) {
-  return element("figcaption", data);
+  return element('figcaption', data);
 }
 
 /**
@@ -334,7 +334,7 @@ export function figcaption(data) {
  * @return {HTMLElement}
  */
 export function address(data) {
-  return element("address", data);
+  return element('address', data);
 }
 
 /**
@@ -342,7 +342,7 @@ export function address(data) {
  * @return {HTMLElement}
  */
 export function code(data) {
-  return element("code", data);
+  return element('code', data);
 }
 
 /**
@@ -350,7 +350,7 @@ export function code(data) {
  * @return {HTMLPreElement}
  */
 export function pre(data) {
-  return element("pre", data);
+  return element('pre', data);
 }
 
 /**
@@ -358,7 +358,7 @@ export function pre(data) {
  * @return {HTMLBRElement}
  */
 export function br(data) {
-  return element("br", data);
+  return element('br', data);
 }
 
 /**
@@ -366,7 +366,7 @@ export function br(data) {
  * @return {HTMLHRElement}
  */
 export function hr(data) {
-  return element("hr", data);
+  return element('hr', data);
 }
 
 /**
@@ -374,7 +374,7 @@ export function hr(data) {
  * @return {HTMLElement}
  */
 export function strong(data) {
-  return element("strong", data);
+  return element('strong', data);
 }
 
 /**
@@ -382,7 +382,7 @@ export function strong(data) {
  * @return {HTMLElement}
  */
 export function em(data) {
-  return element("em", data);
+  return element('em', data);
 }
 
 /**
@@ -390,7 +390,7 @@ export function em(data) {
  * @return {HTMLElement}
  */
 export function small(data) {
-  return element("small", data);
+  return element('small', data);
 }
 
 /**
@@ -398,7 +398,7 @@ export function small(data) {
  * @return {HTMLElement}
  */
 export function mark(data) {
-  return element("mark", data);
+  return element('mark', data);
 }
 
 /**
@@ -406,7 +406,7 @@ export function mark(data) {
  * @return {HTMLElement}
  */
 export function b(data) {
-  return element("b", data);
+  return element('b', data);
 }
 
 /**
@@ -414,7 +414,7 @@ export function b(data) {
  * @return {HTMLElement}
  */
 export function i(data) {
-  return element("i", data);
+  return element('i', data);
 }
 
 /**
@@ -422,7 +422,7 @@ export function i(data) {
  * @return {HTMLElement}
  */
 export function u(data) {
-  return element("u", data);
+  return element('u', data);
 }
 
 /**
@@ -430,7 +430,7 @@ export function u(data) {
  * @return {HTMLElement}
  */
 export function s(data) {
-  return element("s", data);
+  return element('s', data);
 }
 
 /**
@@ -438,7 +438,7 @@ export function s(data) {
  * @return {HTMLElement}
  */
 export function del(data) {
-  return element("del", data);
+  return element('del', data);
 }
 
 /**
@@ -446,7 +446,7 @@ export function del(data) {
  * @return {HTMLElement}
  */
 export function ins(data) {
-  return element("ins", data);
+  return element('ins', data);
 }
 
 /**
@@ -454,7 +454,7 @@ export function ins(data) {
  * @return {HTMLElement}
  */
 export function sub(data) {
-  return element("sub", data);
+  return element('sub', data);
 }
 
 /**
@@ -462,7 +462,7 @@ export function sub(data) {
  * @return {HTMLElement}
  */
 export function sup(data) {
-  return element("sup", data);
+  return element('sup', data);
 }
 
 /**
@@ -470,7 +470,7 @@ export function sup(data) {
  * @return {HTMLQuoteElement}
  */
 export function blockquote(data) {
-  return element("blockquote", data);
+  return element('blockquote', data);
 }
 
 /**
@@ -478,7 +478,7 @@ export function blockquote(data) {
  * @return {HTMLQuoteElement}
  */
 export function q(data) {
-  return element("q", data);
+  return element('q', data);
 }
 
 /**
@@ -486,7 +486,7 @@ export function q(data) {
  * @return {HTMLElement}
  */
 export function abbr(data) {
-  return element("abbr", data);
+  return element('abbr', data);
 }
 
 /**
@@ -494,7 +494,7 @@ export function abbr(data) {
  * @return {HTMLElement}
  */
 export function cite(data) {
-  return element("cite", data);
+  return element('cite', data);
 }
 
 /**
@@ -502,7 +502,7 @@ export function cite(data) {
  * @return {HTMLElement}
  */
 export function kbd(data) {
-  return element("kbd", data);
+  return element('kbd', data);
 }
 
 /**
@@ -510,7 +510,7 @@ export function kbd(data) {
  * @return {HTMLElement}
  */
 export function samp(data) {
-  return element("samp", data);
+  return element('samp', data);
 }
 
 /**
@@ -518,7 +518,7 @@ export function samp(data) {
  * @return {HTMLDataElement}
  */
 export function data(data) {
-  return element("data", data);
+  return element('data', data);
 }
 
 /**
@@ -526,7 +526,7 @@ export function data(data) {
  * @return {HTMLTimeElement}
  */
 export function time(data) {
-  return element("time", data);
+  return element('time', data);
 }
 
 /**
@@ -534,7 +534,7 @@ export function time(data) {
  * @return {HTMLProgressElement}
  */
 export function progress(data) {
-  return element("progress", data);
+  return element('progress', data);
 }
 
 /**
@@ -542,7 +542,7 @@ export function progress(data) {
  * @return {HTMLMeterElement}
  */
 export function meter(data) {
-  return element("meter", data);
+  return element('meter', data);
 }
 
 /**
@@ -550,7 +550,7 @@ export function meter(data) {
  * @return {HTMLDetailsElement}
  */
 export function details(data) {
-  return element("details", data);
+  return element('details', data);
 }
 
 /**
@@ -558,7 +558,7 @@ export function details(data) {
  * @return {HTMLElement}
  */
 export function summary(data) {
-  return element("summary", data);
+  return element('summary', data);
 }
 
 /**
@@ -566,7 +566,7 @@ export function summary(data) {
  * @return {HTMLDialogElement}
  */
 export function dialog(data) {
-  return element("dialog", data);
+  return element('dialog', data);
 }
 
 /**
@@ -574,7 +574,7 @@ export function dialog(data) {
  * @return {HTMLFieldSetElement}
  */
 export function fieldset(data) {
-  return element("fieldset", data);
+  return element('fieldset', data);
 }
 
 /**
@@ -582,7 +582,7 @@ export function fieldset(data) {
  * @return {HTMLLegendElement}
  */
 export function legend(data) {
-  return element("legend", data);
+  return element('legend', data);
 }
 
 /**
@@ -590,7 +590,7 @@ export function legend(data) {
  * @return {HTMLDataListElement}
  */
 export function datalist(data) {
-  return element("datalist", data);
+  return element('datalist', data);
 }
 
 /**
@@ -598,7 +598,7 @@ export function datalist(data) {
  * @return {HTMLOptGroupElement}
  */
 export function optgroup(data) {
-  return element("optgroup", data);
+  return element('optgroup', data);
 }
 
 /**
@@ -606,7 +606,7 @@ export function optgroup(data) {
  * @return {HTMLOutputElement}
  */
 export function output(data) {
-  return element("output", data);
+  return element('output', data);
 }
 
 /**
@@ -614,7 +614,7 @@ export function output(data) {
  * @return {HTMLTemplateElement}
  */
 export function template(data) {
-  return element("template", data);
+  return element('template', data);
 }
 
 /**
@@ -622,7 +622,7 @@ export function template(data) {
  * @return {HTMLSlotElement}
  */
 export function slot(data) {
-  return element("slot", data);
+  return element('slot', data);
 }
 
 /**
@@ -630,7 +630,7 @@ export function slot(data) {
  * @return {HTMLScriptElement}
  */
 export function script(data) {
-  return element("script", data);
+  return element('script', data);
 }
 
 /**
@@ -638,7 +638,7 @@ export function script(data) {
  * @return {HTMLStyleElement}
  */
 export function style(data) {
-  return element("style", data);
+  return element('style', data);
 }
 
 /**
@@ -646,7 +646,7 @@ export function style(data) {
  * @return {HTMLLinkElement}
  */
 export function link(data) {
-  return element("link", data);
+  return element('link', data);
 }
 
 /**
@@ -654,7 +654,7 @@ export function link(data) {
  * @return {HTMLMetaElement}
  */
 export function meta(data) {
-  return element("meta", data);
+  return element('meta', data);
 }
 
 /**
@@ -662,7 +662,7 @@ export function meta(data) {
  * @return {HTMLBaseElement}
  */
 export function base(data) {
-  return element("base", data);
+  return element('base', data);
 }
 
 /**
@@ -670,7 +670,7 @@ export function base(data) {
  * @return {HTMLTitleElement}
  */
 export function title(data) {
-  return element("title", data);
+  return element('title', data);
 }
 
 /**
@@ -678,7 +678,7 @@ export function title(data) {
  * @return {HTMLSourceElement}
  */
 export function source(data) {
-  return element("source", data);
+  return element('source', data);
 }
 
 /**
@@ -686,7 +686,7 @@ export function source(data) {
  * @return {HTMLTrackElement}
  */
 export function track(data) {
-  return element("track", data);
+  return element('track', data);
 }
 
 /**
@@ -694,7 +694,7 @@ export function track(data) {
  * @return {HTMLEmbedElement}
  */
 export function embed(data) {
-  return element("embed", data);
+  return element('embed', data);
 }
 
 /**
@@ -702,7 +702,7 @@ export function embed(data) {
  * @return {HTMLObjectElement}
  */
 export function object(data) {
-  return element("object", data);
+  return element('object', data);
 }
 
 /**
@@ -710,7 +710,7 @@ export function object(data) {
  * @return {HTMLPictureElement}
  */
 export function picture(data) {
-  return element("picture", data);
+  return element('picture', data);
 }
 
 /**
@@ -718,7 +718,7 @@ export function picture(data) {
  * @return {HTMLMapElement}
  */
 export function map(data) {
-  return element("map", data);
+  return element('map', data);
 }
 
 /**
@@ -726,7 +726,7 @@ export function map(data) {
  * @return {HTMLAreaElement}
  */
 export function area(data) {
-  return element("area", data);
+  return element('area', data);
 }
 
 /**
@@ -734,7 +734,7 @@ export function area(data) {
  * @return {HTMLTableCaptionElement}
  */
 export function caption(data) {
-  return element("caption", data);
+  return element('caption', data);
 }
 
 /**
@@ -742,7 +742,7 @@ export function caption(data) {
  * @return {HTMLTableColElement}
  */
 export function col(data) {
-  return element("col", data);
+  return element('col', data);
 }
 
 /**
@@ -750,7 +750,7 @@ export function col(data) {
  * @return {HTMLTableColElement}
  */
 export function colgroup(data) {
-  return element("colgroup", data);
+  return element('colgroup', data);
 }
 
 /**
@@ -758,7 +758,7 @@ export function colgroup(data) {
  * @return {HTMLDListElement}
  */
 export function dl(data) {
-  return element("dl", data);
+  return element('dl', data);
 }
 
 /**
@@ -766,7 +766,7 @@ export function dl(data) {
  * @return {HTMLElement}
  */
 export function dt(data) {
-  return element("dt", data);
+  return element('dt', data);
 }
 
 /**
@@ -774,7 +774,7 @@ export function dt(data) {
  * @return {HTMLElement}
  */
 export function dd(data) {
-  return element("dd", data);
+  return element('dd', data);
 }
 
 /**
@@ -782,7 +782,7 @@ export function dd(data) {
  * @return {HTMLMenuElement}
  */
 export function menu(data) {
-  return element("menu", data);
+  return element('menu', data);
 }
 
 /**
@@ -815,7 +815,7 @@ function assignProperties(element, props) {
 
   for (const key in props) {
     // @ts-expect-error dynamic key access
-    if (typeof props[key] === "object") {
+    if (typeof props[key] === 'object') {
       // @ts-expect-error dynamic key access
       assignProperties(element[key], props[key]);
       // Object.assign(element[key], props[key]);
@@ -878,10 +878,10 @@ function attachEventListener(element, eventData) {
 
   for (const key of keys) {
     const event = eventData[key];
-    if (typeof event === "function") {
+    if (typeof event === 'function') {
       // @ts-expect-error correctly passed handler
       element.addEventListener(key, event);
-    } else if (event && typeof event === "object" && "handler" in event) {
+    } else if (event && typeof event === 'object' && 'handler' in event) {
       if (!event.handler) {
         continue;
       }

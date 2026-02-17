@@ -1,4 +1,5 @@
-// Type definitions for HTML elements, based on JSX React 18 typings
+// Type definitions for HTML elements, based on JSX React 18 typings & Svelte typings
+// taken from: https://github.com/sveltejs/svelte/blob/main/packages/svelte/elements.d.ts
 // Original Project/Authors:
 // Type definitions for React 18.0
 // Project: http://facebook.github.io/react/
@@ -1764,6 +1765,6 @@ export type HTMLElementsAttributesMap = {
   view: SVGAttributes<SVGViewElement>;
 
   [name: string]: { [name: string]: any };
-}
+};
 
 export type ClassValue = string;

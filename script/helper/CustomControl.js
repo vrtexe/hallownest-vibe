@@ -1,9 +1,12 @@
 import { Control, DomEvent } from "leaflet";
-import { button, div, input, label } from "../html.js";
+import icon from "../components/icon.js";
+import { a, button, div } from "html-dom-js";
+
 /**  @import {  type Map  } from "leaflet"; */
 
-export class CustomControl extends Control {
+export class SettingsPanelControl extends Control {
   /** @type {HTMLDivElement|undefined|null} */ container;
+  opened = false;
 
   /**
    * @param {Map} _map
@@ -11,6 +14,67 @@ export class CustomControl extends Control {
    */
   onAdd(_map) {
     this.container = div({
+      attributes: {
+        id: "settings-panel-control-container",
+        class: "leaflet-bar leaflet-control",
+      },
+      children: [
+        button({
+          attributes: {
+            class: "leaflet-control-button settings-panel-toggle-button icon-button",
+          },
+          event: {
+            click: () => {
+              /** @type {HTMLDivElement|null}  */
+              const settingsPanelContainer = document.querySelector("#settings-panel-container");
+              if (!this.opened) {
+                settingsPanelContainer?.classList.add("open");
+                this.opened = true;
+              } else {
+                settingsPanelContainer?.classList.remove("open");
+                this.opened = false;
+              }
+            },
+          },
+          children: [
+            icon({ name: "chevron_left", size: { height: 32, width: 32 } }),
+          ],
+        }),
+        div({
+          attributes: {
+            id: "settings-panel-container",
+          },
+          children: [
+            div({
+              children: [
+                div({
+                  props: {
+                    style: {
+                      display: "flex",
+                    },
+                  },
+                  children: [
+                    a({
+                      attributes: {
+                        href: "#item",
+                      },
+                      children: "Text",
+                    }),
+                    a({
+                      attributes: {
+                        href: "#item",
+                      },
+                      children: "Text",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        }),
+      ],
+    });
+    div({
       attributes: {
         // "aria-label": "Custom Control",
         onclick: (e) => {
@@ -25,24 +89,11 @@ export class CustomControl extends Control {
           height: "100vh",
           margin: "0",
           background: "white",
-          padding: "5px",
+          padding: "0px",
+          border: "0",
         },
       },
       children: [
-        label({
-          props: {
-            htmlFor: "test",
-          },
-          children: "Test Label",
-        }),
-        input({
-          props: {
-            type: "text",
-            placeholder: "Enter text",
-            required: true,
-          },
-        }),
-        // div({ children: "Custom Control" }),
         button({
           props: {
             className: "leaflet-control-button",
