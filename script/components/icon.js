@@ -1,4 +1,5 @@
-import { object } from "html-dom-js"; /** @import { ElementDData } from "html-dom-js" */
+import { object } from "html-dom-js"; 
+/** @import { ElementDData } from "html-dom-js" */
 
 /** @typedef {{ name: string, size?: { height?: number, width?: number } }} IconData */
 
