@@ -1,14 +1,136 @@
 @import '../libs/leaflet/2.0.0-a1/leaflet.css';
 
-html,
-body,
-#map {
+:root {
+  --hk-bg-deep: #0d0e1a;
+  --hk-bg: #14152b;
+  --hk-bg-surface: #1a1b2e;
+  --hk-bg-elevated: #222340;
+  --hk-text: #c8ccd4;
+  --hk-text-muted: #8b8fa3;
+  --hk-text-dim: #585b6d;
+  --hk-accent: #5b6ee1;
+  --hk-accent-hover: #7080f0;
+  --hk-gold: #d4a017;
+  --hk-gold-dim: #a07a10;
+  --hk-danger: #e05050;
+  --hk-green: #7cbb4a;
+  --hk-border: #2a2b3d;
+  --hk-border-light: #3a3b50;
+  --hk-shadow: rgba(0, 0, 0, 0.5);
+  --hk-scrollbar: #2a2b3d;
+  --hk-scrollbar-thumb: #585b6d;
+  --sidebar-width: 320px;
+  --tab-bar-height: 42px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #map {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   z-index: 1;
-  background: #000000;
+  background: var(--hk-bg-deep);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--hk-text);
+}
+
+/* ===== Scrollbars ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--hk-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hk-scrollbar-thumb);
+  border-radius: 3px;
+}
+
+/* ===== Leaflet Overrides ===== */
+.leaflet-control-attribution {
+  background: var(--hk-bg) !important;
+  color: var(--hk-text-muted) !important;
+  font-size: 10px;
+}
+.leaflet-control-attribution a {
+  color: var(--hk-accent) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--hk-bg-surface);
+  color: var(--hk-text);
+  border: 1px solid var(--hk-border);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px var(--hk-shadow);
+}
+.leaflet-popup-tip {
+  background: var(--hk-bg-surface);
+  border: 1px solid var(--hk-border);
+}
+
+.hk-tooltip {
+  background: var(--hk-bg-elevated) !important;
+  color: var(--hk-text) !important;
+  border: 1px solid var(--hk-border) !important;
+  border-radius: 4px;
+  font-size: 12px;
+  box-shadow: 0 2px 8px var(--hk-shadow);
+}
+.hk-tooltip::before {
+  border-top-color: var(--hk-bg-elevated) !important;
+}
+
+.hk-popup-content {
+  color: var(--hk-text);
+  font-size: 13px;
+}
+.hk-popup-title {
+  color: var(--hk-gold);
+}
+.hk-popup-desc {
+  margin: 4px 0 0;
+  color: var(--hk-text-muted);
+}
+
+.hk-icon {
+  background: var(--hk-bg);
+  border-radius: 50%;
+  border: 2px solid var(--hk-border);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 2px 6px var(--hk-shadow);
+  padding: 2px;
+}
+
+/* ===== Sidebar Control ===== */
+#settings-panel-control-container {
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+
+.settings-panel-toggle-button {
+  position-anchor: --settings-panel-container;
+  position: absolute;
+  left: anchor(right);
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: var(--hk-bg-surface);
+  color: var(--hk-text);
+  padding-block: 0.4rem;
+  margin-top: 0.75rem;
+  border-radius: 0 4px 4px 0;
+  max-width: 1.5rem;
+  cursor: pointer;
+  border: 1px solid var(--hk-border);
+  border-left: none;
+  transition: background 0.15s;
+}
+.settings-panel-toggle-button:hover {
+  background: var(--hk-bg-elevated);
 }
 
 .icon-button {
@@ -17,65 +139,583 @@ body,
   justify-content: center;
 }
 
-#settings-panel-control-container {
-  margin: 0;
-}
-.settings-panel-toggle-button {
-  position-anchor: --settings-panel-container;
-  position: absolute;
-  left: anchor(right);
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-color: white;
-  padding-block: 0.25rem;
-  margin-top: 0.75rem;
-  border-radius: 4px;
-  max-width: 1.25rem;
+.icon-object {
+  color: var(--hk-text);
 }
 
 #settings-panel-container {
   anchor-name: --settings-panel-container;
   height: 100vh;
   margin: 0;
-  background: white;
-  padding: 5px 0px;
+  background: var(--hk-bg);
+  padding: 0;
   max-width: 0;
   border: 0;
   overflow: hidden;
-  transition: max-width 0.1s ease-in-out;
+  transition: max-width 0.2s ease-in-out;
+  border-right: 1px solid var(--hk-border);
+  box-shadow: 4px 0 16px var(--hk-shadow);
 }
 
 #settings-panel-container.open {
-  max-width: 100%;
+  max-width: var(--sidebar-width);
 }
 
-#info {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 200px;
-  height: 200px;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.icon-select-container {
+.sidebar-inner {
+  width: var(--sidebar-width);
+  height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-.input-container.vertical {
+/* ===== Tab System ===== */
+.sidebar-tabs {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
-.input-container > textarea {
-  expa
+.sidebar-tab-bar {
+  display: flex;
+  background: var(--hk-bg-deep);
+  border-bottom: 1px solid var(--hk-border);
+  flex-shrink: 0;
+  height: var(--tab-bar-height);
 }
 
-.input-list {
+.sidebar-tab-button {
+  flex: 1;
+  background: transparent;
+  color: var(--hk-text-muted);
+  border: none;
+  padding: 0.5rem 0.25rem;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.sidebar-tab-button:hover {
+  color: var(--hk-text);
+  background: var(--hk-bg-surface);
+}
+.sidebar-tab-button.active {
+  color: var(--hk-gold);
+  border-bottom-color: var(--hk-gold);
+  background: var(--hk-bg);
+}
+
+.tab-icon {
+  font-size: 14px;
+}
+.tab-label {
+  white-space: nowrap;
+}
+
+.sidebar-tab-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar-tab-panel {
+  display: none;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0.75rem;
+}
+.sidebar-tab-panel.active {
+  display: block;
+}
+
+/* ===== Marker Controls (Tab 1) ===== */
+.marker-controls {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2px;
+}
+
+.marker-controls-header {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--hk-border);
+  margin-bottom: 0.5rem;
+}
+
+.toggle-all-label {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--hk-text-muted);
+}
+
+.marker-controls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.marker-control-row {
+  border-radius: 4px;
+  transition: opacity 0.15s, background 0.15s;
+}
+.marker-control-row:hover {
+  background: var(--hk-bg-surface);
+}
+.marker-control-row.disabled {
+  opacity: 0.4;
+}
+
+.marker-control-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+  font-size: 13px;
+  user-select: none;
+}
+
+.marker-checkbox {
+  accent-color: var(--hk-accent);
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.marker-icon-wrapper {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--hk-bg-deep);
+  border: 2px solid var(--hk-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.marker-icon-wrapper.small {
+  width: 22px;
+  height: 22px;
+}
+
+.marker-icon-img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.marker-name {
+  flex: 1;
+  color: var(--hk-text);
+}
+
+.marker-count {
+  color: var(--hk-text-dim);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===== Progress Tracker (Tab 2) ===== */
+.progress-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.progress-total-stats {
+  background: var(--hk-bg-surface);
+  border: 1px solid var(--hk-border);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.progress-total-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.progress-total-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hk-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.progress-total-numbers {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.total-pct {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--hk-gold);
+}
+
+.total-count {
+  font-size: 12px;
+  color: var(--hk-text-muted);
+}
+
+.progress-bar-track {
+  height: 6px;
+  background: var(--hk-bg-deep);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-bar-track.total {
+  height: 8px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  background: var(--hk-accent);
+}
+.progress-bar-fill.total {
+  background: linear-gradient(90deg, var(--hk-gold-dim), var(--hk-gold));
+}
+
+.progress-category-card {
+  background: var(--hk-bg-surface);
+  border: 1px solid var(--hk-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.progress-category-header:hover {
+  background: var(--hk-bg-elevated);
+}
+
+.progress-category-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.progress-category-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.progress-count {
+  font-size: 11px;
+  color: var(--hk-text-muted);
+  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+}
+
+.progress-chevron {
+  color: var(--hk-text-dim);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.progress-item-list {
+  border-top: 1px solid var(--hk-border);
+  max-height: 300px;
+  overflow-y: auto;
+  transition: max-height 0.2s ease;
+}
+.progress-item-list.collapsed {
+  max-height: 0;
+  border-top: none;
+  overflow: hidden;
+}
+
+.progress-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.1s;
+  color: var(--hk-text-muted);
+}
+.progress-item:hover {
+  background: var(--hk-bg-elevated);
+}
+.progress-item.checked {
+  color: var(--hk-green);
+}
+.progress-item.checked .progress-item-name {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.progress-item-check {
+  font-size: 12px;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+}
+
+.progress-item-name {
+  flex: 1;
+}
+
+.progress-reset-wrapper {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--hk-border);
+}
+
+/* ===== Speedrun Editor (Tab 3) ===== */
+.speedrun-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.speedrun-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--hk-text-muted);
+}
+
+.speedrun-bundles-section,
+.speedrun-stages-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.speedrun-stage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.speedrun-stage-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.1s;
+}
+.speedrun-stage-row:hover {
+  background: var(--hk-bg-surface);
+}
+.speedrun-stage-row.active {
+  background: var(--hk-bg-elevated);
+  border: 1px solid var(--hk-border);
+}
+
+.stage-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stage-name {
+  flex: 1;
+}
+
+.stage-marker-count {
+  font-size: 11px;
+  color: var(--hk-text-dim);
+}
+
+.speedrun-stage-detail {
+  border-top: 1px solid var(--hk-border);
+  padding-top: 0.5rem;
+}
+
+.speedrun-stage-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.speedrun-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 12px;
+  color: var(--hk-text-muted);
+}
+
+.speedrun-markers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.speedrun-marker-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  background: var(--hk-bg-surface);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.speedrun-marker-idx {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--hk-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.speedrun-marker-name {
+  flex: 1;
+}
+
+.speedrun-marker-coords {
+  color: var(--hk-text-dim);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.speedrun-marker-icon-preview {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.icon-picker {
+  background: var(--hk-bg-surface);
+  border: 1px solid var(--hk-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.icon-picker-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--hk-text-muted);
+}
+
+.icon-picker-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-picker-preview {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  background: var(--hk-bg-deep);
+  border: 2px solid var(--hk-border);
+  border-radius: 50%;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.icon-picker-select {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== Shared UI Components ===== */
+.hk-button {
+  background: var(--hk-bg-elevated);
+  color: var(--hk-text);
+  border: 1px solid var(--hk-border);
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.hk-button:hover {
+  background: var(--hk-border-light);
+  border-color: var(--hk-text-dim);
+}
+.hk-button.active {
+  background: var(--hk-accent);
+  border-color: var(--hk-accent-hover);
+  color: white;
+}
+.hk-button.small {
+  padding: 0.2rem 0.5rem;
+  font-size: 11px;
+}
+.hk-button.tiny {
+  padding: 0.1rem 0.35rem;
+  font-size: 11px;
+  line-height: 1;
+}
+.hk-button.danger {
+  color: var(--hk-danger);
+  border-color: var(--hk-danger);
+}
+.hk-button.danger:hover {
+  background: var(--hk-danger);
+  color: white;
+}
+
+.hk-input, .hk-select {
+  background: var(--hk-bg-deep);
+  color: var(--hk-text);
+  border: 1px solid var(--hk-border);
+  border-radius: 4px;
+  padding: 0.35rem 0.5rem;
+  font-size: 12px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+.hk-input:focus, .hk-select:focus {
+  border-color: var(--hk-accent);
+}
+
+.hk-select option {
+  background: var(--hk-bg);
+  color: var(--hk-text);
 }
