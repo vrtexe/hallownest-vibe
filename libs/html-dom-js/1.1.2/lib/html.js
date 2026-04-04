@@ -1,6 +1,6 @@
 import { element } from './core/html.js';
 
-/** @import { type ElementData } from './types/html.dom.js' */
+/** @import { type ElementData } from './types/html.dom.d.ts' */
 // export { element } from './core/html.js';
 
 export { element };
