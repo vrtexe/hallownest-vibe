@@ -1,0 +1,56 @@
+{
+  "name": "html-dom-js",
+  "version": "1.1.2",
+  "description": "A JavaScript library for creating HTML elements",
+  "license": "MIT",
+  "author": "vrtexe",
+  "type": "module",
+  "main": "lib/html.js",
+  "types": "lib/html.d.ts",
+  "exports": {
+    ".": {
+      "default": "./lib/html.js",
+      "types": "./lib/html.d.ts"
+    },
+    "./global": {
+      "default": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./html": {
+      "default": "./lib/html.js",
+      "types": "./lib/html.d.ts"
+    },
+    "./html/deprecated": {
+      "default": "./lib/html-deprecated.js",
+      "types": "./lib/html-deprecated.d.ts"
+    },
+    "./svg": {
+      "default": "./lib/svg.js",
+      "types": "./lib/svg.d.ts"
+    },
+    "./math": {
+      "default": "./lib/math.js",
+      "types": "./lib/math.d.ts"
+    },
+    "./type/*": {
+      "default": "./lib/types/*"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "start": "npx http-server . --port 3100",
+    "clean-types": "node ./clean-types.js",
+    "generate-types": "npm run clean-types && npx -p typescript tsc -p tsconfig.json"
+  },
+  "homepage": "https://github.com/vrtexe/html-dom-js#readme",
+  "bugs": {
+    "url": "https://github.com/vrtexe/html-dom-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vrtexe/html-dom-js.git"
+  },
+  "packageManager": "^npm@11.6.0"
+}
