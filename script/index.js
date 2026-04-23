@@ -8,6 +8,7 @@ import { createSidebarTabs } from "./components/sidebar-tabs.js";
 import { createMarkerControls } from "./components/marker-controls.js";
 import { createProgressTracker } from "./components/progress-tracker.js";
 import { createSpeedrunEditor } from "./components/speedrun-editor.js";
+import { createAdminEditor } from "./components/admin-editor.js";
 
 /**
  * @typedef {{ id: string, name: string, icon: string, color: string, trackable: boolean, markers: Array<{id: string, name: string, coordinates: [number, number], description: string, icon?: string}> }} MarkerCategory
@@ -103,6 +104,8 @@ async function initializeMap() {
 
   const speedrunEditor = createSpeedrunEditor({ map, icons: iconsData });
 
+  const adminEditor = createAdminEditor({ map, markersData, categoryLayers });
+
   const sidebarTabs = createSidebarTabs({
     tabs: [
       {
@@ -122,6 +125,12 @@ async function initializeMap() {
         label: "Routes",
         icon: "⚡",
         content: () => speedrunEditor.container,
+      },
+      {
+        id: "admin",
+        label: "Admin",
+        icon: "⚙",
+        content: () => adminEditor.container,
       },
     ],
     defaultTab: "layers",
